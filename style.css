@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121214;
+  color: #f8f8fc;
+  font-family: "Roboto", sans-serif;
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+body.light {
+    background: #f8f8fc;
+  color: #121214;
+}
+
+#toggle-mode {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#timer {  
+  font-size: 96px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button {
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+  font-size: 64px;
+}
+
+#controls {
+  border-radius: 9999px;
+  background: #242424;
+  color: #f8f8fc;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 40px;
+}
+
+body.light .ph-sun, body:not(.light) .ph-moon {
+    display: none;
+}
+
+.ph-sun {
+    color: #f8f8fc;
+}
+
+.secondary {
+    color: #f8f8fc;
+}
+
+.running .ph-play-circle, 
+.running .ph-timer, 
+.music-on .ph-speaker-none,
+body:not(.running) .ph-pause-circle, 
+body:not(.running) .ph-stop-circle,
+body:not(.music-on) .ph-speaker-high{
+    display: none;
+}

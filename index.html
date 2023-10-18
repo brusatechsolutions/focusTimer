@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Focus Timer - Pomodoro</title>
+    <link rel="shortcut icon" href="./assets/favIcon.svg" type="image/x-svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./main.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <button id="toggle-mode">
+        <i class="ph-bold ph-sun"></i>
+        <i class="ph-bold ph-moon"></i>
+      </button>
+
+      <section id="timer">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls">
+        <button data-action="toggleRunning" class="ph ph-play-circle"></button>
+        <button data-action="toggleRunning" class="ph ph-pause-circle secondary"></button>
+        <button data-action="set" class="ph ph-timer"></button>
+        <button data-action="stop" class="ph ph-stop-circle secondary"></button>
+        <button data-action="toggleMusic" class="ph ph-speaker-none"></button>
+        <button data-action="toggleMusic" class="ph ph-speaker-high secondary"></button>
+      </section>
+    </div>
+  </body>
+</html>
